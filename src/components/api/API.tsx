@@ -1,4 +1,4 @@
-import {P, Table, TableRow} from '@lite-u/ui'
+import {Con, P, Table, TableRow} from '@lite-u/ui'
 import {CSSProperties} from 'react'
 import CodeBlock from '../codeBlock/codeBlock.tsx'
 import MDBlock from '../codeBlock/MDBlock.tsx'

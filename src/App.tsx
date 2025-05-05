@@ -15,19 +15,19 @@ function App() {
       <Routes>
 
         <Route path={'/ui'} element={<RootLayout/>}>
-          <Route path={'installation'} element={<Installation/>}/>
+          <Route path={'/ui/installation'} element={<Installation/>}/>
 
-          <Route path={'components'} element={<ComponentLayout/>}>
+          <Route path={'/ui/components'} element={<ComponentLayout/>}>
             {
               Object.values(COMPONENT_ROUTE_MAP).map((COMP, index) => {
                 // @ts-ignore
-                return <Route key={index} path={COMP.to} element={COMP.comp}/>
+                return <Route key={index} path={'/ui/components/' + COMP.to} element={COMP.comp}/>
               })
             }
           </Route>
 
 
-          <Route path={'hooks'} element={<HooksLayout/>}>
+          <Route path={'/ui/hooks'} element={<HooksLayout/>}>
             {
               Object.values(HOOK_ROUTE_MAP).map((HOOK, index) => {
                 // @ts-ignore
