@@ -8,9 +8,10 @@ import CommonFoot from '../common/CommonFoot.tsx'
 
 const ComponentLayout = () => {
   const {pathname} = useLocation()
-  const currentPath = location.pathname.split('/')[2]
+  const str = location.pathname.split('/')
+  const currentPath = str[str.length - 1]
   const COMP_ROUTE = COMPONENT_ROUTE_MAP[currentPath as keyof typeof COMPONENT_ROUTE_MAP]
-
+  console.log(currentPath)
   if (!COMP_ROUTE) return
   // @ts-ignore
   if (!OUTPUT_JSON[COMP_ROUTE.apiNameKey]) return

@@ -9,7 +9,7 @@ const RootLayout = () => {
   const mainRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    /*if (mainRef.current) {
+    if (mainRef.current) {
       const paths = pathname.split('/')
       const pathLen = paths.length
 
@@ -25,7 +25,7 @@ const RootLayout = () => {
 
       document.title = '@lite-u/ui Library'
     }
-*/
+
   }, [pathname])
 
   return <Flex col fw fh ovh>
