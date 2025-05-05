@@ -21,7 +21,7 @@ function App() {
             {
               Object.values(COMPONENT_ROUTE_MAP).map((COMP, index) => {
                 // @ts-ignore
-                return <Route key={index} path={'/ui/components/' + COMP.to} element={COMP.comp}/>
+                return <Route key={index} path={COMP.to} element={COMP.comp}/>
               })
             }
           </Route>
